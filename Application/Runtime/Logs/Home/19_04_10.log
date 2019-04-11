@@ -1,0 +1,54 @@
+[ 2019-04-10T20:07:26+08:00 ] 127.0.0.1 /index.php?a=admin&c=part&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+ERR: 无法加载控制器:Part
+
+[ 2019-04-10T21:58:02+08:00 ] 127.0.0.1 /index.php?a=admin&c=cate&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+ERR: 无法加载控制器:Cate
+
+[ 2019-04-10T21:59:56+08:00 ] 127.0.0.1 /index.php?a=admin&c=cate&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+ERR: 无法加载控制器:Cate
+
+[ 2019-04-10T22:00:01+08:00 ] 127.0.0.1 /index.php?a=admin&c=cate&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+ERR: 无法加载控制器:Cate
+
+[ 2019-04-10T22:00:16+08:00 ] 127.0.0.1 /index.php?a=admin&c=cate&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+ERR: 无法加载控制器:Cate
+
+[ 2019-04-10T22:10:11+08:00 ] 127.0.0.1 /index.php?a=admin&c=cate&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载控制器:Cate
+

@@ -1,0 +1,45 @@
+[ 2019-04-04T11:42:04+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+
+[ 2019-04-04T12:03:26+08:00 ] 127.0.0.1 /messenger-front/get?c=nN640gDS6JtlXY3Qjc54BZw%2BLP3ehwpxTRMmR4uICLRvX10pfNy9QgBv53olGidpsELvfjw7fwElEQHvzXrfbzMeePLVFTnT3hD98SBHD3dW55Ty4DDVMakku7GHKRub2sqIADmJfEbBcnH7YcA49svViq22DNLysId0KVJCOFfkQqmNOeyXUwPOCDCgjPcfuuUZjRuTntSSLtgc%2FIE9dWWQ7r4fN%2FLW%2FTGXM419IG5Cmn3AjFupQqeFVHJh8QtLUr6NdaP58evZJ4kpjX%2FKucWUDj2rnZnY%2FCfbQrLFIrfsZ2roWk2OF0LbKnHZeIgqqDLEKdDqL9gLym0DADZIqZZR4wWb080BBLzczxzEY05YuonIXyWEzQllj%2B%2BkogLaqHaJYv7m1nNOK042%2Bijc65Y14hPLxfGGNoyu1oSiTrCeT73p1QimB%2FBrIPfw4ckbtBkzvSZ6yZc7NshKrSmytNGeLvdAes50eljWuSxGt8JHN3frhy7bHkmDofU05jj%2FlIc3irAzJH3wbpmyrLy2UKNaP%2Fd7l6DZkXdfTlPPGKCWmSQ%2BNmejjfVNWGWvTlBdb%2F%2F8%2BXTO%2BugSg1pJq2HXkHMr0bGwvKTpDczmsVs9TSgMb5jIEd787U%2BZQnkxXPSWlxEAgrMGOMzoTRcva510BBvSZJFAntHrFPMstVtO6JiC2QeYvdFffdKgMao64Tt0IP4PN%2F2s%2B2Goqmv4bXCyPsK24aqHdC71&v=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Messenger-front
+
+[ 2019-04-04T14:27:46+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+
+[ 2019-04-04T14:41:32+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+
+[ 2019-04-04T14:50:14+08:00 ] 127.0.0.1 /css/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+ERR: 无法加载模块:Css
+
+[ 2019-04-04T14:50:14+08:00 ] 127.0.0.1 /css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+ERR: 无法加载模块:Css
+
+[ 2019-04-04T14:50:14+08:00 ] 127.0.0.1 /js/libs/modernizr.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+ERR: 无法加载模块:Js
+
+[ 2019-04-04T16:12:12+08:00 ] 127.0.0.1 /messenger-front/get?c=nN640gDS6JvhLGVcrlwz0bCRKXVHrYH%2FaQAyyzd3n2EbhMNDqGBFxgtZV2dMc2Q1uyAKSTrV5jxQxUm13WigbJMg96HaRL2cTB7QK6BGuerVU6%2Bw8sP1wCTenycrSkpg9jJcWf2q6hirkwLw3xMQiydLYQMkpcN6jjs7ptGzmp7osxJFE2lp6%2FFiPpsxR5hoiC%2Bdeu3zaQNRIyMFE2Fc0%2B1NT7FQ1FwUoeogErhzUxbhic0pA3ImrA0UrX9Rqb3Yg36e9gfnqAxYmausEaFO2MbIDgKjitSzANj663NhCKVecOfHjAAf9sLyjBc13VUxgYgIF%2FRMr1opaYrUaqE1ihrzf5MaFH%2FK%2BWWKwMpe0Ejy5C1EiVHfMZhdE%2Bw6grY9I1vosz3NUks5bkn7trFoWWhQxKFhLAcBLMWjzH1qgsSGlAH8mq1iE0jGD4gU380OyqA9fcz6HiGYvY91Fr2YSFlrwE5Oa9ZZHVCnAMmohuRyRWD9H7PW6nhz3kSv24cMCWBrCF3nBH%2BXZfhzV448L%2FBWtO61BLrqYfqNyygw1dejAJtlWMoa3Ium0S%2FhmM73gCpFEiWf2WyKNL4GCHnhfFwVijfQr8RJYFYXQPBZz8qlbcFQXHPyRg5a%2BZEQHUUhz9HuQ%2FHw2pHUhpuOUmkcUmvVBvvCBYvH5q7pGsBIctVV0KSgqvSblfzQ%2BWRlovt%2BfmNPODjbUhHaTcStGeYP%2Bw%3D%3D&v=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+ERR: 无法加载模块:Messenger-front
+
