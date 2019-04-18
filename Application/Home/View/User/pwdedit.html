@@ -1,0 +1,36 @@
+<include file="Common/header" />
+
+    <!--内容部分start-->
+    <div class="content">     
+      <form action="/index.php?a=home&c=user&a=pwdupdate&uid=<?=$user['uid']?>" method="post">
+        <table align="center" width="300" height="60">
+          <tr>
+            <td><label>旧密码:</label></td>
+            <td><input type="password" name="upwd" value=""></td>
+          </tr>
+
+          <tr>
+            <td><label>确认密码:</label></td>
+            <td><input type="password" name="reupwd" value=""></td>
+          </tr>
+
+          <tr>
+            <td><label>新密码:</label></td>
+            <td><input type="password" name="nupwd" value=""></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" align="center">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="submit" value="修改">
+              <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+            </td>
+          </tr>
+          
+        </table>
+      </form>
+        
+    </div>
+      <!--帖子列表部分end-->
+
+<include file="Common/footer" />

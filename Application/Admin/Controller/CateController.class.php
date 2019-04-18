@@ -35,21 +35,39 @@ class CateController extends CommonController
 	}
 
 
-	// 查看版块
 	public function index()
 	{
-		// 获取数据
-		$cates = M('bbs_cate')->select();
 
-		// 获取分区信息
+		$condition = [];
+		if (!empty($_GET['pid'])) {
+			$condition['pid'] = ['eq', "{$_GET['pid']}"];
+		}
+
+		if (!empty($_GET['cname'])) {
+			$condition['cname'] = ['like', "%{$_GET['cname']}%"];
+		}
 		$parts = M('bbs_part')->select();
-
-		// ['pid' => '分区名称', pid=>'分区名称'];
-		$parts = array_column($parts, 'pname', 'pid');
 		// echo '<pre>';
-		// print_r($arr);
+		// print_r($parts);
 		// die;
+		
+		$parts = array_column($parts, 'pname', 'pid');
+		
 
+		$Cate = M('bbs_cate');
+
+		$cnt = $Cate -> where($condition) -> count(); 
+
+		$Page = new \Think\Page($cnt, 5);
+
+
+		$html_page = $Page -> show();
+
+		$cates = $Cate ->where($condition)
+					   ->limit($Page->firstRow,$Page->listRows)
+					   ->select();
+
+	
 		$users = M('bbs_user')->select();
 		$users = array_column($users, 'uname', 'uid');
 		//$users = M('bbs_user')->getField('uid,uname');
@@ -58,6 +76,7 @@ class CateController extends CommonController
 		$this->assign('cates', $cates);
 		$this->assign('parts', $parts);
 		$this->assign('users', $users);
+		$this->assign('html_page', $html_page);
 		$this->display();
 	}
 
@@ -66,6 +85,13 @@ class CateController extends CommonController
 	public function del()
 	{
 		$cid = $_GET['cid'];
+
+		$posts = M('bbs_post')->where("cid=$cid")->select();
+
+		if (!empty($posts)){
+			$this->error('请先清空帖子');
+		}
+
 		$row = M('bbs_cate')->delete($cid); 
 
 		if ($row) {
@@ -102,7 +128,7 @@ class CateController extends CommonController
 		$row = M('bbs_cate')->where("cid=$cid")->save($_POST);
 
 		if ($row) {
-			$this->success('修改成功!');
+			$this->success('修改成功!','/index.php?m=admin&c=cate&a=index');
 		} else {
 			$this->error('修改失败!');
 		}

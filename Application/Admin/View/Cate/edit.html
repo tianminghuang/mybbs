@@ -15,7 +15,7 @@
                             <td>
                                 <select name="pid" id="catid" class="required">
                                 	<?php foreach($parts as $part): ?>
-                                    <option value="<?=$part['pid']?>"><?=$part['pname']?></option>
+                                    <option value="<?=$part['pid']?>" <?php if($part['pid'] == $cate['pid']) {  echo 'selected'; } ?> ><?=$part['pname']?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </td>

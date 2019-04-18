@@ -8,19 +8,25 @@
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="#" method="post">
+                <form action="/index.php?m=admin&c=cate&a=index"  method="get">
+                    <input type="hidden" name="m" value="admin">
+                    <input type="hidden" name="c" value="cate">
+                    <input type="hidden" name="a" value="index">
                     <table class="search-tab">
                         <tr>
                             <th width="120">选择分类:</th>
+
                             <td>
-                                <select name="search-sort" id="">
-                                    <option value="">全部</option>
-                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
+                                <select name="pid" id="">
+                                    <?php foreach($parts as $k=>$v): ?>
+                                    <option value="<?=$k?>">
+                                        <?=$v?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </td>
                             <th width="70">关键字:</th>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
-                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                            <td><input class="common-text" placeholder="关键字" name="cname" value="" id="" type="text"></td>
+                            <td><input class="btn btn-primary btn2" value="查询" type="submit"></td>
                         </tr>
                     </table>
                 </form>
@@ -57,7 +63,7 @@
                         </tr>
                     <?php endforeach; ?>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"><?=$html_page?></div>
                 </div>
             </form>
         </div>

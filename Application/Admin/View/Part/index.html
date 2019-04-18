@@ -8,18 +8,15 @@
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="#" method="post">
+                <form action="/index.php?m=admin&c=part&a=index" method="get">
+                    <input type="hidden" name="m" value="admin">
+                    <input type="hidden" name="c" value="part">
+                    <input type="hidden" name="a" value="index">
                     <table class="search-tab">
                         <tr>
-                            <th width="120">选择分类:</th>
-                            <td>
-                                <select name="search-sort" id="">
-                                    <option value="">全部</option>
-                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
-                                </select>
-                            </td>
+                            
                             <th width="70">关键字:</th>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
+                            <td><input class="common-text" placeholder="关键字" name="pname" value="" id="" type="text"></td>
                             <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
                         </tr>
                     </table>
@@ -53,7 +50,7 @@
                         </tr>
                     <?php endforeach; ?>
                     </tbody></table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"><?=$html_page?></div>
                 </div>
             </form>
         </div>

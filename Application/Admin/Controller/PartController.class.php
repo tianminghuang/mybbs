@@ -26,20 +26,43 @@ class PartController extends CommonController
 	// 查看所有分区
 	public function index()
 	{	
-		// 获取数据
-		$parts = M('bbs_part')->select();
+		$condition = [];
 
+		if (!empty($_GET['pname'])) {
+			$condition['pname'] = ['like', "%{$_GET['pname']}%"];
+		}
+
+		$Part = M('bbs_part');
+
+		$cnt = $Part -> where($condition) -> count(); 
+
+		$Page = new \Think\Page($cnt, 4);
+
+		// 得到分页显示html代码
+		$html_page = $Page -> show();
+
+		// 获取数据
+		$parts = $Part ->where($condition)
+					   ->limit($Page->firstRow,$Page->listRows)
+					   ->select();
 		// 遍历显示
 		$this->assign('parts', $parts);
+		$this->assign('html_page', $html_page);
 		$this->display(); 
 
 	}
  	// 删除分区
 	public function del()
 	{
-		$pid = $_GEI['pid'];
+		$pid = $_GET['pid'];
+		
+		$cate = M('bbs_cate')->where("pid=$pid")->select();
 
-		$row = M('bbs_part ')->delelt ($pid);
+		if (!empty($cate)){
+			$this->error('请先删除所有版块');
+		}
+
+		$row = M('bbs_part ')->delete ($pid);
 
 		if ($row) {
 			$this->success('删除分区成功!');

@@ -20,9 +20,9 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#">管理员</a></li>
-                <li><a href="#">修改密码</a></li>
-                <li><a href="#">退出</a></li>
+                <li><a href="#"><?= $_SESSION['userInfo']['uname'] ?></a></li>
+                <li><a href="/index.php?m=admin&c=user&a=pwdedit&uid=<?= $_SESSION['userInfo']['uid'] ?>">修改密码</a></li>
+                <li><a href="/index.php?m=admin&c=login&a=logout">退出</a></li>
             </ul>
         </div>
     </div>
@@ -38,16 +38,27 @@
                     <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
                     <ul class="sub-menu">
                         <li><a href="/index.php?m=admin&c=user&a=create"><i class="icon-font">&#xe008;</i>添加用户</a></li>
-                        <li><a href="/index.php?m=admin&c=user&a=index">&#xe005;</i>查看用户</a></li>
+                        <li><a href="/index.php?m=admin&c=user&a=index"><i class="icon-font">&#xe005;</i>查看用户</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
+                    <a href="#"><i class="icon-font">&#xe018;</i>分区管理</a>
                     <ul class="sub-menu">
-                        <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
+                        <li><a href="/index.php?m=admin&c=part&a=create"><i class="icon-font">&#xe017;</i>添加分区</a></li>
+                        <li><a href="/index.php?m=admin&c=part&a=index"><i class="icon-font">&#xe037;</i>查看分区</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>版块管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="/index.php?m=admin&c=cate&a=create"><i class="icon-font">&#xe017;</i>添加版块</a></li>
+                        <li><a href="/index.php?m=admin&c=cate&a=index"><i class="icon-font">&#xe037;</i>查看版块</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>帖子管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="/index.php?m=admin&c=tiezi&a=index"><i class="icon-font">&#xe017;</i>查看帖子</a></li>
                     </ul>
                 </li>
             </ul>
@@ -85,9 +96,9 @@
                             <tr>
                                 <th>性别：</th>
                                 <td>
-                                	<input class="common-text" name="sex" size="50" value="m" <?php if($user['sex']='m'){echo 'checked';} ?> type="radio">男
-                                	<input class="common-text" name="sex" size="50" value="w" <?php if($user['sex']='w'){echo 'checked';} ?> type="radio">女
-                                	<input class="common-text" name="sex" size="50" value="x" <?php if($user['sex']='x') {echo 'checked';} ?> type="radio">保密
+                                	<input class="common-text" name="sex" size="50" value="m" <?php if($user['sex']=='m'){echo 'checked';} ?> type="radio">男
+                                	<input class="common-text" name="sex" size="50" value="w" <?php if($user['sex']=='w'){echo 'checked';} ?> type="radio">女
+                                	<input class="common-text" name="sex" size="50" value="x" <?php if($user['sex']=='x') {echo 'checked';} ?> type="radio">保密
                             	</td>
                             </tr>
 

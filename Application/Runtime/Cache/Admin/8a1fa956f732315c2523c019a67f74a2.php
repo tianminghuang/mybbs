@@ -21,7 +21,7 @@
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
                 <li><a href="#"><?= $_SESSION['userInfo']['uname'] ?></a></li>
-                <li><a href="#">修改密码</a></li>
+                <li><a href="/index.php?m=admin&c=user&a=pwdedit&uid=<?= $_SESSION['userInfo']['uid'] ?>">修改密码</a></li>
                 <li><a href="/index.php?m=admin&c=login&a=logout">退出</a></li>
             </ul>
         </div>
@@ -55,6 +55,12 @@
                         <li><a href="/index.php?m=admin&c=cate&a=index"><i class="icon-font">&#xe037;</i>查看版块</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>帖子管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="/index.php?m=admin&c=tiezi&a=index"><i class="icon-font">&#xe017;</i>查看帖子</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -68,18 +74,15 @@
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="#" method="post">
+                <form action="/index.php?m=admin&c=part&a=index" method="get">
+                    <input type="hidden" name="m" value="admin">
+                    <input type="hidden" name="c" value="part">
+                    <input type="hidden" name="a" value="index">
                     <table class="search-tab">
                         <tr>
-                            <th width="120">选择分类:</th>
-                            <td>
-                                <select name="search-sort" id="">
-                                    <option value="">全部</option>
-                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
-                                </select>
-                            </td>
+                            
                             <th width="70">关键字:</th>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
+                            <td><input class="common-text" placeholder="关键字" name="pname" value="" id="" type="text"></td>
                             <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
                         </tr>
                     </table>
@@ -113,7 +116,7 @@
                         </tr>
                     <?php endforeach; ?>
                     </tbody></table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"><?=$html_page?></div>
                 </div>
             </form>
         </div>
